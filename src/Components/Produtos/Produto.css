@@ -1,0 +1,10 @@
+.produtos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.produtos__box img {
+  max-width: 300px;
+}
