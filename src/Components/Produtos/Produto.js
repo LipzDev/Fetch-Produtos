@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Produto.css';
 import { Helmet } from 'react-helmet';
 
@@ -17,21 +18,6 @@ const Produto = () => {
     getInfo();
   }, []);
 
-  React.useEffect(() => {
-    const produtoImg = document.querySelectorAll('.produtos__box img');
-
-    async function getProduto(event) {
-      const name = event.target.name;
-      const api = await fetch(
-        `https://ranekapi.origamid.dev/json/api/produto/${name}`,
-      );
-      const json = await api.json();
-      console.log(json);
-    }
-
-    produtoImg.forEach((item) => item.addEventListener('click', getProduto));
-  }, [item]);
-
   return (
     <React.Fragment>
       <Helmet>
@@ -45,7 +31,9 @@ const Produto = () => {
             {item &&
               item.map(({ id, nome, fotos }) => (
                 <div key={id} className="produtos__box">
-                  <img src={fotos[0].src} alt={fotos[0].titulo} name={id} />
+                  <Link to={`produtos/${id}`}>
+                    <img src={fotos[0].src} alt={fotos[0].titulo} name={id} />
+                  </Link>
                   <h2>{nome}</h2>
                 </div>
               ))}
