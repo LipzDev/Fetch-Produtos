@@ -5,14 +5,17 @@ import { Helmet } from 'react-helmet';
 
 const Produto = () => {
   const [item, setItem] = React.useState(null);
+  const [load, setLoad] = React.useState(false);
 
   React.useEffect(() => {
     async function getInfo() {
+      setLoad(true);
       const api = await fetch(
         `https://ranekapi.origamid.dev/json/api/produto/`,
       );
       const json = await api.json();
       setItem(json);
+      setLoad(false);
     }
 
     getInfo();
@@ -28,6 +31,7 @@ const Produto = () => {
       <section className="produtos efeito">
         <div className="container">
           <div className="produtos__item">
+            {load === true ? <h1>Carregando...</h1> : ''}
             {item &&
               item.map(({ id, nome, fotos }) => (
                 <div key={id} className="produtos__box">
