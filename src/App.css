@@ -3,3 +3,16 @@
   width: 95%;
   margin: 0 auto;
 }
+
+.efeito {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: efeito 0.3s forwards;
+}
+
+@keyframes efeito {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}

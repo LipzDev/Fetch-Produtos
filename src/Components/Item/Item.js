@@ -1,4 +1,5 @@
 import React from 'react';
+import './Item.css';
 import { useParams } from 'react-router';
 
 const Item = () => {
@@ -17,7 +18,7 @@ const Item = () => {
   if (item === null) return null;
 
   return (
-    <section className="item">
+    <section className="item efeito">
       <div className="container">
         <div className="item__produto">
           <img src={item.fotos[0].src} />

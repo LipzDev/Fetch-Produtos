@@ -25,7 +25,7 @@ const Produto = () => {
         <meta name="description" content="Página de produtos!" />
         <title>Ranek | Produtos</title>
       </Helmet>
-      <section className="produtos">
+      <section className="produtos efeito">
         <div className="container">
           <div className="produtos__item">
             {item &&

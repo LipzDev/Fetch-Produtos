@@ -11,7 +11,7 @@ const Contato = () => {
         <title>Ranek | Contato</title>
       </Helmet>
 
-      <div>
+      <section className="efeito">
         <img src="#" alt="" />
 
         <div className="info">
@@ -20,7 +20,7 @@ const Contato = () => {
           <p>999-999</p>
           <p>Rua: Viela Angelo Brunholi, 269</p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
