@@ -1,1 +1,11 @@
-/* The component style is inserted here. */
+.contato__item {
+  display: flex;
+}
+
+.contato__item img {
+  max-width: 300px;
+}
+
+.contato__text {
+  margin-left: 30px;
+}

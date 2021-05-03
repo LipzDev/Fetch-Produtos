@@ -1,3 +1,25 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header li {
+  margin-right: 20px;
+}
+
+.header a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
 .active {
-  background: #ccc;
+  background-color: #ccc !important;
+  color: black !important;
 }

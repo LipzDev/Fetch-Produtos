@@ -7,4 +7,15 @@
 
 .produtos__box img {
   max-width: 300px;
+  cursor: pointer;
+}
+
+.produtos__item a {
+  text-decoration: none;
+}
+
+.produtos__item h1 {
+  color: black;
+  font-weight: 400;
+  font-size: 1.3rem;
 }

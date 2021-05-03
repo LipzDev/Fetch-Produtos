@@ -1,27 +1,22 @@
 import React from 'react';
 import './Contato.css';
-import { Helmet } from 'react-helmet';
+import img1 from '../../Assets/smartwatch-1.jpg';
 
 const Contato = () => {
   return (
-    <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta name="description" content="Página de produtos!" />
-        <title>Ranek | Contato</title>
-      </Helmet>
-
-      <section className="efeito">
-        <img src="#" alt="" />
-
-        <div className="info">
-          <h1>Entre em contato.</h1>
-          <p>andre@origamid</p>
-          <p>999-999</p>
-          <p>Rua: Viela Angelo Brunholi, 269</p>
+    <section className="contato efeito">
+      <div className="container">
+        <div className="contato__item">
+          <img src={img1} alt="smartwatch-1" />
+          <div className="contato__text">
+            <h1>Contato</h1>
+            <p>Endereço: Rua fulano de tal</p>
+            <p>Numero: 363</p>
+            <p>Telefone: 999-999</p>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

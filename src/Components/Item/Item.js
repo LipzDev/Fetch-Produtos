@@ -1,32 +1,35 @@
 import React from 'react';
-import './Item.css';
 import { useParams } from 'react-router';
+import './Item.css';
 
 const Item = () => {
   const [item, setItem] = React.useState(null);
-  const [load, setLoad] = React.useState(false);
+  const [status, setStatus] = React.useState(false);
   const { id } = useParams();
 
   React.useEffect(() => {
     async function showItem(url) {
-      setLoad(true);
+      setStatus(true);
       const response = await fetch(url);
       const json = await response.json();
       setItem(json);
-      setLoad(false);
+      setStatus(false);
     }
+
     showItem(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
   }, [id]);
 
   return (
     <section className="item efeito">
       <div className="container">
-        <div className="item__produto">
-          {load === true ? <h1>Carregando...</h1> : ''}
+        <div className="item__sepecs">
+          {status === true ? <h1 class="loading">Carregando...</h1> : ''}
           <img src={item && item.fotos[0].src} />
-          <h2>{item && item.nome}</h2>
-          <span>{item && item.preco}</span>
-          <p>{item && item.descricao}</p>
+          <div className="item__text">
+            <h2>{item && item.nome}</h2>
+            <span className="price">{item && 'R$ ' + item.preco}</span>
+            <p>{item && item.descricao}</p>
+          </div>
         </div>
       </div>
     </section>

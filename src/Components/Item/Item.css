@@ -1,3 +1,26 @@
-.item__produto img {
+.item__sepecs img {
   max-width: 300px;
+}
+
+.item__sepecs {
+  display: flex;
+}
+
+.item__text {
+  margin-left: 30px;
+}
+
+.item__text span {
+  margin: 10px 0;
+}
+
+.item__text p {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.price {
+  background-color: green;
+  color: white;
+  padding: 4px;
 }
