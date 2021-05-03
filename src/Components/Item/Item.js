@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { Helmet } from 'react-helmet';
 import './Item.css';
 
 const Item = () => {
@@ -21,6 +22,11 @@ const Item = () => {
 
   return (
     <section className="item efeito">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Produto | {`${item && item.nome}`}</title>
+        <meta name="description" content="Página de itens!" />
+      </Helmet>
       <div className="container">
         <div className="item__sepecs">
           {status === true ? <h1 class="loading">Carregando...</h1> : ''}

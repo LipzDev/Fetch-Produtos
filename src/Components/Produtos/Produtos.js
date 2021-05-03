@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './Produtos.css';
 
 const Produtos = () => {
@@ -22,6 +23,11 @@ const Produtos = () => {
 
   return (
     <section className="produtos efeito">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Produtos</title>
+        <meta name="description" content="Página de produtos!" />
+      </Helmet>
       <div className="container">
         <div className="produtos__item">
           {status === true ? <h1 class="loading">Carregando...</h1> : ''}
