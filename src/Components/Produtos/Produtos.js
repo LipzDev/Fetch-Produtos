@@ -33,7 +33,7 @@ const Produtos = () => {
           {status === true ? <h1 class="loading">Carregando...</h1> : ''}
           {item &&
             item.map(({ id, fotos, nome }) => (
-              <Link to={`produtos/${id}`} className="produtos__box" key={id}>
+              <Link to={`produto/${id}`} className="produtos__box" key={id}>
                 <img src={fotos[0].src} alt={fotos[0].titulo} />
                 <h1>{nome}</h1>
               </Link>
